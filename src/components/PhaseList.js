@@ -24,13 +24,13 @@ const PhaseList = (props) => {
                         <Button>LIFESTYLE PAGE</Button>
                     </Card>
                 </div>
-                <div className="col">
+                {/* <div className="col">
                     <Card body className="text-center">
                         <CardTitle><h3>Meal Tracker</h3></CardTitle>
                         <CardText>Track your progress</CardText>
                         <Button>MEAL TRACKER</Button>
                     </Card>
-                </div>
+                </div> */}
 
             </div>
         </div>

@@ -9,6 +9,7 @@ import About from './components/About';
 
 import Footer from './components/Footer';
 import './App.css';
+import MealPrep from './components/MealPrep';
 
 class App extends Component {
   render() {
@@ -19,7 +20,9 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          {/* <PhaseList /> */}
+          <Route path="/phases" component={PhaseList} />
+          <Route path="/mealtracker" component={MealPrep} />
+          
           {/* <Footer /> */}
         </div>
       </BrowserRouter>

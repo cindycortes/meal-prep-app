@@ -28,12 +28,12 @@ class PhaseList extends Component {
 
                         <Card body className="text-center">
                             <CardTitle><h3>PRE-OP</h3></CardTitle>
-                            <CardText>2 weeks prior to surgery.</CardText>
+                            <CardText>2 weeks prior to surgery</CardText>
                             <Button onClick={() => this.routeChange1('/preop') }>PRE-OP PAGE</Button>
                         </Card>
                         <Card body className="text-center">
                             <CardTitle><h3>POST-OP</h3></CardTitle>
-                            <CardText>8-9 weeks after surgery.</CardText>
+                            <CardText>8-9 weeks after surgery</CardText>
                             <Button onClick={() => this.routeChange2('/postop')}> POST-OP PAGE</Button>
                         </Card>
                         <Card body className="text-center">

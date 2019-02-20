@@ -8,7 +8,7 @@ const Header = () => {
         <a className="brand-logo left">My Bariatric Pal</a>
           <ul className="right">
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
+            {/* <li><NavLink to="/about">About</NavLink></li> */}
             <li><NavLink to="/phaselist">Phases</NavLink></li>
             <li><NavLink to="/mealtracker">Meal Tracker</NavLink></li>
 

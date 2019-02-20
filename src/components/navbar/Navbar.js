@@ -1,11 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
 
-const Header = () => {
+const Navbar = () => {
   return (
-    <nav className="nav-wrapper teal">
+    <nav className="nav-wrapper teal darken-3">
       <div className="container">
-        <a className="brand-logo left">My Bariatric Pal</a>
+        <Link to="/" className="brand-logo left">My Bariatric Pal</Link>
+          <SignedInLinks />
+          <SignedOutLinks />
+          
           <ul className="right">
             <li><NavLink to="/">Home</NavLink></li>
             {/* <li><NavLink to="/about">About</NavLink></li> */}
@@ -19,4 +24,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Navbar;

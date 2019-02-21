@@ -3,6 +3,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import FoodLogDetails from './components/foodlogs/FoodLogDetails';
+// import SignIn from './components/auth/SignIn';
+// import SignUp from './components/auth/SignUp';
+import CreateFoodLog from './components/foodlogs/CreateFoodLog';
+import DatePicker from 'react-date-picker';
+
 
 import PhaseList from './components/PhaseList';
 // import Phase from './components/Phase';
@@ -25,8 +30,12 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/" component={Home} />
             <Route path="/foodlog/:id" component={FoodLogDetails} />
+            {/* <Route path="/signin" component={SignIn} /> */}
+            {/* <Route path="/signup" component={SignUp} /> */}
+            <Route path="/create" component={CreateFoodLog} />
+
 
             <Route path="/about" component={About} />
             <Route exact path="/phaselist" component={PhaseList} />

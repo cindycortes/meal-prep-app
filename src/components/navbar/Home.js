@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
 class Home extends Component {
+    routeChange() {
+        this.props.history.push('/phaselist')
+    }
     render() {
 
         return (
@@ -37,7 +40,7 @@ class Home extends Component {
                     <li>Certain things will change once you have surgery; such as food intake, separating fluids from meals, but the fundamentals are the same: healthy habits create a healthy body and life. </li>
                 </div>
 
-
+                <button onClick={() => this.routeChange('/phaselist')}>Get Started! </button>
 
 
 

@@ -6,8 +6,6 @@ import { Card, Button, CardTitle, CardText } from 'reactstrap';
 class PhaseList extends Component {
     
 
-    
-
     routeChange1(preop) {
         this.props.history.push(preop);
     }

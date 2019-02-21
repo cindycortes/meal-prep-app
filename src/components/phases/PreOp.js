@@ -4,6 +4,21 @@ import CreateFoodLog from '../foodlogs/CreateFoodLog';
 
 class PreOp extends Component {
 
+    state = {
+        meals: []
+    }
+
+    async componentDidMount() {
+        const response = await fetch(`http://localhost:8000/foodlog`)
+        const meals = await response.json();
+        this.setState({ meals });
+        console.log(meals)
+    } catch(error) {
+        console.log(error);
+    } 
+
+    
+
     render() {
         return (
             <div className="container">
@@ -15,24 +30,24 @@ class PreOp extends Component {
                 <div className="row">
                     <div className="col s6">
 
-                        <ul class="collection with-header">
+                        <ul className="collection with-header">
                             <li className="collection-header"><h5>CAN EAT: </h5></li>
-                            <li class="collection-item">Lean protein: Chicken (baked/boiled), fish or lunch meat</li>
-                            <li class="collection-item">Protein Shakes: Premier Protein Shake, Bariatric Advantage, Pure Protein</li>
-                            <li class="collection-item">Entrees: Lean Cuisine entrees, Healthy Choice entrees, Weight Watchers Smart Ones entrees, Atkins entrees *Most entrees average 200-400 calories. </li>
+                            <li className="collection-item">Lean protein: Chicken (baked/boiled), fish or lunch meat</li>
+                            <li className="collection-item">Protein Shakes: Premier Protein Shake, Bariatric Advantage, Pure Protein</li>
+                            <li className="collection-item">Entrees: Lean Cuisine entrees, Healthy Choice entrees, Weight Watchers Smart Ones entrees, Atkins entrees *Most entrees average 200-400 calories. </li>
 
 
-                            <li class="collection-item">Water!!! At least 40oz a day</li>
+                            <li className="collection-item">Water!!! At least 40oz a day</li>
                             {/* <li class="collection-item">No fruit and veggies</li>
                             <li class="collection-item">Little to no fat, no butter, no oil</li> */}
                         </ul>
                     </div>
                     <div className="col s6">
 
-                        <ul class="collection with-header">
+                        <ul className="collection with-header">
                             <li className="collection-header"><h5>CAN NOT EAT: </h5></li>
-                            <li class="collection-item">No fruit and veggies</li>
-                            <li class="collection-item">Avoid fat, butter and oil</li>
+                            <li className="collection-item">No fruit and veggies</li>
+                            <li className="collection-item">Avoid fat, butter and oil</li>
                             {/* <li class="collection-item">Water!!! At least 40oz a day</li> */}
                         </ul>
                     </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import MealTracker from './components/MealTracker';
-import CreateFoodLog from '../foodlogs/CreateFoodLog';
+import AddMealForm from '../foodlogs/AddMealForm';
+import MealList from '../foodlogs/MealList';
 
 class PreOp extends Component {
 
@@ -12,21 +13,50 @@ class PreOp extends Component {
         const response = await fetch(`http://localhost:8000/foodlog`)
         const meals = await response.json();
         this.setState({ meals });
-        console.log(meals)
+        // console.log(meals)
     } catch(error) {
         console.log(error);
-    } 
+    }
 
-    
+
+    addMeal = (newMeal) => {
+        const { phase, date, meal_of_the_day, protein, water_intake } = newMeal;
+        fetch(`http://localhost:8000/foodlog`, {
+            method: "post", 
+            body: JSON.stringify({ phase, date, meal_of_the_day, protein, water_intake }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }) 
+        .then (res => res.json())
+        .then (json => {
+            this.setState(prevState => {
+                return {
+                    meals: [
+                        ...prevState.meals, 
+                        {
+                            phase,
+                            date,
+                            meal_of_the_day,
+                            protein,
+                            water_intake
+                        }
+                    ]
+                }
+            })
+        })
+    }
 
     render() {
+
+
         return (
             <div className="container">
                 <h1> PRE-OP DIET</h1><br />
 
                 <h4>Description: 2-4 weeks of prep prior to surgery date</h4>
                 <h6>Men: may need to eat more to stay full; averaging 1400-1800 calories per day.
-</h6><h6>Women: may need fewer calories; averaging 1000-1400 calories per day. </h6>
+                </h6><h6>Women: may need fewer calories; averaging 1000-1400 calories per day. </h6>
                 <div className="row">
                     <div className="col s6">
 
@@ -58,10 +88,12 @@ class PreOp extends Component {
                 <div className="row">
                     <div className="col">
 
-                        <CreateFoodLog />
+                        <AddMealForm />
                     </div>
+
                     <div className="col">
-                        Food Log
+                        <h4>Meal List: </h4>
+                        <MealList meals={this.state.meals} addMeal={this.addMeal} />
                     </div>
                 </div>
 

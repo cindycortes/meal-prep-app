@@ -25,7 +25,9 @@ class PhaseList extends Component {
                
 
                 <div className="row">
+                    <div className="col-2">
 
+                    </div>
 
                     <div className="col">
 
@@ -44,6 +46,9 @@ class PhaseList extends Component {
                             <CardText>Maintaining a healthy regimen</CardText>
                             <Button onClick={() => this.routeChange3('/lifestyle')}>LIFESTYLE PAGE</Button>
                         </Card>
+                    </div>
+                    <div className="col-2">
+
                     </div>
 
 

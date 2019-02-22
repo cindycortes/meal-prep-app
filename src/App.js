@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
-import FoodLogDetails from './components/foodlogs/FoodLogDetails';
+import FoodLogDetails from './components/foodlogs/FoodLogItem';
 // import SignIn from './components/auth/SignIn';
 // import SignUp from './components/auth/SignUp';
-import CreateFoodLog from './components/foodlogs/CreateFoodLog';
+import AddMealForm from './components/foodlogs/AddMealForm';
 import DatePicker from 'react-date-picker';
 
 
@@ -34,7 +34,7 @@ class App extends Component {
             <Route path="/foodlog/:id" component={FoodLogDetails} />
             {/* <Route path="/signin" component={SignIn} /> */}
             {/* <Route path="/signup" component={SignUp} /> */}
-            <Route path="/create" component={CreateFoodLog} />
+            <Route path="/create" component={AddMealForm} />
 
 
             <Route path="/about" component={About} />

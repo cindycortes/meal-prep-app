@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CreateFoodLog from '../foodlogs/CreateFoodLog';
+import CreateFoodLog from '../foodlogs/AddMealForm';
 
 
 class PostOp extends Component {
@@ -15,12 +15,12 @@ class PostOp extends Component {
 
                         <ul class="collection with-header">
                             <li className="collection-header"><h5>CAN EAT (First 2 weeks): </h5></li>
-                            <li class="collection-item">Clear liquids</li>
-                            <li class="collection-item">Clear Protein</li>
-                            <li class="collection-item">Fiber: Powder Fiber</li>
-                            <li class="collection-item">Jello</li>
-                            <li class="collection-item">Broth & Soup</li>
-                            <li class="collection-item">Sugar free popsicles</li>
+                            <li className="collection-item">Clear liquids</li>
+                            <li className="collection-item">Clear Protein</li>
+                            <li className="collection-item">Fiber: Powder Fiber</li>
+                            <li className="collection-item">Jello</li>
+                            <li className="collection-item">Broth & Soup</li>
+                            <li className="collection-item">Sugar free popsicles</li>
 
 
 
@@ -35,9 +35,9 @@ class PostOp extends Component {
 
                         <ul class="collection with-header">
                             <li className="collection-header"><h5>CAN EAT (3 weeks & up) </h5></li>
-                            <li class="collection-item">Liquids</li>
-                            <li class="collection-item">Protein Shakes</li>
-                            <li class="collection-item">Eggs</li>
+                            <li className="collection-item">Liquids</li>
+                            <li className="collection-item">Protein Shakes</li>
+                            <li clasName="collection-item">Eggs</li>
 
 
                         </ul>
@@ -49,7 +49,7 @@ class PostOp extends Component {
 
                         <CreateFoodLog />
                     </div>
-                    <div className="col">
+                    <div className="col">Name
                         Food Log
                     </div>
                 </div>

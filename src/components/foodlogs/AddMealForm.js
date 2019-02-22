@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-class CreateFoodLog extends Component {
+class AddMealForm extends Component {
     render() {
         return (
 
@@ -52,7 +52,7 @@ class CreateFoodLog extends Component {
                         <option>16oz</option>
                     </Input>
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button>Submit Meal</Button>
 
             </Form>
 
@@ -61,5 +61,5 @@ class CreateFoodLog extends Component {
     }
 }
 
-export default CreateFoodLog
+export default AddMealForm
 

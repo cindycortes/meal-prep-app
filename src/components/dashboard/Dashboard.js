@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PhaseList from '../PhaseList';
 // import FoodList from '../foodlogs/FoodList'
-import CreateFoodLog from '../foodlogs/CreateFoodLog'
+import CreateFoodLog from '../foodlogs/AddMealForm'
 
 class Dashboard extends Component {
     render() {

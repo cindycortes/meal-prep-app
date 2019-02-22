@@ -2,30 +2,60 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 class AddMealForm extends Component {
+    state = {
+        phase: "", 
+        date: "", 
+        meal_of_the_day: "", 
+        protein: "", 
+        water_intake: ""
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        const newMeal = {
+            phase: this.state.phase,
+            date: this.state.date, 
+            meal_of_the_day: this.state.meal_of_the_day,
+            protein: this.state.protein,
+            water_intake: this.state.water_intake
+        }
+        this.props.addMeal(newMeal)
+    }
+
+    handleInputChange = e => {
+        const { name, value } = e.target;
+        this.setState({
+            [name]: value
+        })
+    }
+
+
+
     render() {
+        console.log(this.props.meals);
         return (
 
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
                 <FormGroup>
-                    <Label for="exampleSelect">Select Phase</Label>
-                    <Input type="select" name="select" id="exampleSelect">
+                    <Label>Select Phase</Label>
+                    <Input type="select" name="phase" value={this.state.phase} onChange={this.handleInputChange}>
                         <option>Pre-Op</option>
                         <option>Post-Op</option>
                         <option>Lifestyle</option>
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleDate">Date</Label>
+                    <Label>Date</Label>
                     <Input
                         type="date"
                         name="date"
-                        id="exampleDate"
-                        placeholder="date placeholder"
+                        value={this.state.date}
+                        onChange={this.handleInputChange}
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleSelect">Meal Of The Day</Label>
-                    <Input type="select" name="select" id="exampleSelect">
+                    <Label>Meal Of The Day</Label>
+                    <Input type="select" name="meal_of_the_day" value={this.state.meal_of_the_day} onChange={this.handleInputChange}>
                         <option>Breakfast</option>
                         <option>Lunch</option>
                         <option>Dinner</option>
@@ -34,8 +64,8 @@ class AddMealForm extends Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleSelect">Type of Protein</Label>
-                    <Input type="select" name="select" id="exampleSelect">
+                    <Label>Type of Protein</Label>
+                    <Input type="select" name="protein" value={this.state.protein} onChange={this.handleInputChange}>
                         <option>Chicken</option>
                         <option>Fish</option>
                         <option>Lunch Meat</option>
@@ -43,8 +73,8 @@ class AddMealForm extends Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleSelect">Water Intake</Label>
-                    <Input type="select" name="select" id="exampleSelect">
+                    <Label>Water Intake</Label>
+                    <Input type="select" name="water_intake" value={this.state.water_intake} onChange={this.handleInputChange}>
                         <option>None</option>
                         <option>4oz</option>
                         <option>8oz</option>
@@ -52,7 +82,7 @@ class AddMealForm extends Component {
                         <option>16oz</option>
                     </Input>
                 </FormGroup>
-                <Button>Submit Meal</Button>
+                <Button type="submit">Submit Meal</Button>
 
             </Form>
 

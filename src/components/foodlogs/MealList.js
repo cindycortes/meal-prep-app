@@ -1,14 +1,8 @@
 import React, { Component } from 'react'
 import MealItem from './MealItem'
+import AddMealForm from './AddMealForm';
 
 class MealList extends Component {
-    state = {
-        phase: "", 
-        date: "", 
-        meal_of_the_day: "", 
-        protein: "", 
-        water_intake: ""
-    }
 
     render() {
         console.log(this.props.meals);
@@ -22,19 +16,25 @@ class MealList extends Component {
 
         return (
             <div>
-               
-                {listOfMeals}
 
-                <div className="container">
-                    
+                <div className="row">
+                    <div className="col">
+                        <AddMealForm />
+
+                    </div>
+                    <div className="col">
+
+                        {listOfMeals}
+                    </div>
 
                 </div>
-               
-                {/* <MealItem />
-                <MealItem /> */}
-                
 
             </div>
+
+              
+
+
+         
         )
     }
 }

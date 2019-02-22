@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import MealTracker from './components/MealTracker';
 import AddMealForm from '../foodlogs/AddMealForm';
 import MealList from '../foodlogs/MealList';
+import Axios from 'axios';
 
 class PreOp extends Component {
 
@@ -45,6 +46,22 @@ class PreOp extends Component {
                 }
             })
         })
+    }
+
+    removeMeal = id => {
+        Axios.delete(`http://localhost:8000/foodlog/${id}`)
+        this.setState(prevState => ({
+            meals: prevState.meals.reduce((acc, cv) => {
+                if(cv.id === (id) ) {
+                    return [
+                        ...acc,
+                        {
+                            ...cv,
+                        }
+                    ]
+                }
+            })
+        }))
     }
 
     render() {

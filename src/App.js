@@ -4,11 +4,11 @@ import Navbar from './components/navbar/Navbar';
 // import Jumbotron from '.components/navbar/Jumbotron'
 import Dashboard from './components/dashboard/Dashboard';
 import FoodLogDetails from './components/foodlogs/FoodLogItem';
-// import SignIn from './components/auth/SignIn';
+import SignIn from './components/auth/SignIn';
 // import SignUp from './components/auth/SignUp';
 import AddMealForm from './components/foodlogs/AddMealForm';
 import DatePicker from 'react-date-picker';
-
+import Axios from 'axios';
 
 import PhaseList from './components/PhaseList';
 // import Phase from './components/Phase';
@@ -33,7 +33,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/foodlog/:id" component={FoodLogDetails} />
-            {/* <Route path="/signin" component={SignIn} /> */}
+            <Route path="/signin" component={SignIn} />
             {/* <Route path="/signup" component={SignUp} /> */}
             <Route path="/create" component={AddMealForm} />
 

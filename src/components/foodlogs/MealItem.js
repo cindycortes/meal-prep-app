@@ -11,6 +11,10 @@ const MealItem = ({ meal }) => {
     const { phase, date, meal_of_the_day, protein, water_intake } = meal
     console.log(meal)
 
+    // handleDelete = e => {
+        
+    // }
+
     return (
         <div className="container">
             <Row>
@@ -24,7 +28,7 @@ const MealItem = ({ meal }) => {
                             {protein}<br />
                             {water_intake}
                         </CardText>
-                        <Button style={{width: "50px"}}>X</Button>
+                        <Button color="warning" style={{width: "50px"}}>X</Button>
 
 
                     </Card>

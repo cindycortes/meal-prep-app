@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
+// import Jumbotron from '.components/navbar/Jumbotron'
 import Dashboard from './components/dashboard/Dashboard';
 import FoodLogDetails from './components/foodlogs/FoodLogItem';
 // import SignIn from './components/auth/SignIn';
@@ -47,7 +48,7 @@ class App extends Component {
           </Switch>
 
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
 
       </BrowserRouter>

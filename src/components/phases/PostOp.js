@@ -49,7 +49,7 @@ class PostOp extends Component {
 
                         <CreateFoodLog />
                     </div>
-                    <div className="col">Name
+                    <div className="col">
                         Food Log
                     </div>
                 </div>

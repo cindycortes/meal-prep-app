@@ -26,7 +26,7 @@ class PostOp extends Component {
 
 
 
-                            <li class="collection-item">Water!!! At least 40oz a day</li>
+                            <li className="collection-item">Water!!! At least 40oz a day</li>
                             {/* <li class="collection-item">No fruit and veggies</li>
                             <li class="collection-item">Little to no fat, no butter, no oil</li> */}
                         </ul>
@@ -37,7 +37,7 @@ class PostOp extends Component {
                             <li className="collection-header"><h5>CAN EAT (3 weeks & up) </h5></li>
                             <li className="collection-item">Liquids</li>
                             <li className="collection-item">Protein Shakes</li>
-                            <li clasName="collection-item">Eggs</li>
+                            <li className="collection-item">Eggs</li>
 
 
                         </ul>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Jumbotron, Button } from 'reactstrap'
 
 class Home extends Component {
     routeChange() {
@@ -6,10 +7,21 @@ class Home extends Component {
     }
     render() {
 
-        return (
+        var styles={
+            backgroundImage: "url('https://www.castlighthealth.com/wp-content/uploads/2018/03/HealthyFood.jpg')",
+            width: "100%",
+            padding: "200px"
+        }
+
+        return ( 
+
             <div className="container">
-                
-                <div className="row" style={{marginTop: "50px"}}>
+                <Jumbotron style={styles}>
+                    <h1 className="display-3"></h1>
+                    
+                </Jumbotron>
+
+                <div className="row" style={{ marginTop: "50px" }}>
 
                     <p>Obesity is a chronic disease that requires ongoing effort and permeant lifestyle changes. Bariatric
                     surgery is not a cure nor is it to be considered a “one and done” approach to treating obesity. Weight

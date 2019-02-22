@@ -1,4 +1,4 @@
-# Q3 Meal-Prep-App
+# Q3 My Bariatric App
 
 
 ### Project description:

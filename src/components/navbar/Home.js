@@ -57,7 +57,11 @@ class Home extends Component {
 
                 <Button color="success" onClick={() => this.routeChange('/phaselist')}>Get Started! </Button>
 
-
+                <div className="">
+                    <div className="row">
+                        
+                    </div>
+                </div>
 
             </div>
         )

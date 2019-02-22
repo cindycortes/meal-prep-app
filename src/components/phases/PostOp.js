@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CreateFoodLog from '../foodlogs/AddMealForm';
+// import MealList from '../foodlogs/MealList';
 
 
 class PostOp extends Component {
@@ -50,7 +51,7 @@ class PostOp extends Component {
                         <CreateFoodLog />
                     </div>
                     <div className="col">
-                        Food Log
+                        {/* <MealList /> */}
                     </div>
                 </div>
             </div>

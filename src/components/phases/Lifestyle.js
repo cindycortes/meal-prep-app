@@ -1,17 +1,35 @@
 import React, { Component } from 'react';
+import AddMealForm from '../foodlogs/AddMealForm';
 
-class Lifestyle extends Component { 
-    render () {
+
+class Lifestyle extends Component {
+    render() {
         return (
-            <div>
-                <h1> Welcome to your Lifestyle Tracker</h1><br/>
+            <div className="container">
+
+
+                <h1> Welcome to your Lifestyle Tracker</h1><br />
                 <h4>Description: Tracker for life! </h4>
-                <ul class="collection">
-                    <li class="collection-item">Lean protein: Protein shakes, chicken (baked/boiled), fish, lunch meat</li>
-                    <li class="collection-item">No fruit and veggies</li>
-                    <li class="collection-item">Little to no fat, no butter, no oil</li>
-                    <li class="collection-item">Water!!! At least 40oz a day</li>
-                </ul>
+                <div className="row">
+                    <div className="col s6">
+
+                        <ul class="collection">
+                            <li class="collection-item">5 small meals per day</li>
+                            <li class="collection-item">1/2 cup of food per meal, nothing over!</li>
+                            <li class="collection-item">Can't have water during meals. Must drink 30 minutes prior or after a meal. </li>
+                            <li class="collection-item">Regular exercise</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div className="col">
+
+                    <AddMealForm />
+                </div>
+                <div className="col">
+
+                </div>
 
             </div>
         )

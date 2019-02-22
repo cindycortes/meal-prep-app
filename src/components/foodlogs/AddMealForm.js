@@ -83,7 +83,7 @@ class AddMealForm extends Component {
                         <option>16oz</option>
                     </Input>
                 </FormGroup>
-                <Button type="submit">Submit Meal</Button>
+                <Button color="success" type="submit">Submit Meal</Button>
 
             </Form>
 

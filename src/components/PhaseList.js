@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { Card, Button, CardTitle, CardText, Row, Col, CardDeck } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Row, Col, CardDeck, Img } from 'reactstrap';
 
 
 class PhaseList extends Component {

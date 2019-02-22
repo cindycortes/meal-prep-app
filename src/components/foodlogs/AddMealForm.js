@@ -32,7 +32,6 @@ class AddMealForm extends Component {
     }
 
 
-
     render() {
         console.log(this.props.meals);
         return (

@@ -106,12 +106,12 @@ class PreOp extends Component {
                 <div className="row">
                     <div className="col">
 
-                        <AddMealForm />
+                        <AddMealForm addMeal={this.addMeal}/>
                     </div>
 
                     <div className="col">
 
-                        <MealList meals={this.state.meals} addMeal={this.addMeal} />
+                        <MealList meals={this.state.meals}  />
                     </div>
                 </div>
 

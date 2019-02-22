@@ -24,6 +24,7 @@ class AddMealForm extends Component {
 
     handleInputChange = e => {
         const { name, value } = e.target;
+        console.log('handleInputChange', name, value);
         this.setState({
             [name]: value
         })
@@ -32,7 +33,7 @@ class AddMealForm extends Component {
 
 
     render() {
-        console.log(this.props.meals);
+        // console.log(this.props.meals);
         return (
 
             <Form onSubmit={this.handleSubmit}>

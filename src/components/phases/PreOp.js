@@ -78,7 +78,7 @@ class PreOp extends Component {
                             <li className="collection-header"><h5>CAN NOT EAT: </h5></li>
                             <li className="collection-item">No fruit and veggies</li>
                             <li className="collection-item">Avoid fat, butter and oil</li>
-                            {/* <li class="collection-item">Water!!! At least 40oz a day</li> */}
+                           
                         </ul>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ class PreOp extends Component {
                 <div className="row">
                 
                     <div className="col">
-                        <h4>Meal List: </h4>
+                        
                         <MealList meals={this.state.meals} addMeal={this.addMeal} />
                     </div>
                 </div>

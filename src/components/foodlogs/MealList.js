@@ -25,7 +25,7 @@ class MealList extends Component {
 
                     </div>
                     <div className="col">
-                    <h4>Meal List: </h4>
+                    <h4>Food Log </h4>
                         {listOfMeals}
                     </div>
 

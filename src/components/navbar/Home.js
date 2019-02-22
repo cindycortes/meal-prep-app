@@ -7,18 +7,18 @@ class Home extends Component {
     }
     render() {
 
-        var styles={
+        var styles = {
             backgroundImage: "url('https://www.castlighthealth.com/wp-content/uploads/2018/03/HealthyFood.jpg')",
             width: "100%",
             padding: "200px"
         }
 
-        return ( 
+        return (
 
             <div className="container">
                 <Jumbotron style={styles}>
                     <h1 className="display-3"></h1>
-                    
+
                 </Jumbotron>
 
                 <div className="row" style={{ marginTop: "50px" }}>
@@ -36,23 +36,26 @@ class Home extends Component {
 
                 <div className="row">
 
-                    <h4>Start Now!</h4>
-
-                    <li>Weight loss and optimal health is more than diet and exercise; it’s an accumulation of habits
+                    <h4>Start Now!</h4><br />
+                    <ul>
+                        <li>Weight loss and optimal health is more than diet and exercise; it’s an accumulation of habits
                             that are integrated into your daily life.</li>
-                    <li>The bariatric team expects you to start making small lifestyle changes now in
-                    preparation for the surgery. Waiting for the pre op consults with the surgeon and
+                        <li>The bariatric team expects you to start making small lifestyle changes now in
+                        preparation for the surgery. Waiting for the pre op consults with the surgeon and
                             dietitian to get started sends the message you are not committed to the process.</li>
-                    <li>The surgery only changes the size of your stomach; you have to do the rest to get the results
+                        <li>The surgery only changes the size of your stomach; you have to do the rest to get the results
                             you want long term.</li>
-                    <li>As you work through your Bariatric check list, begin to establish the healthy habitsthat will
+                        <li>As you work through your Bariatric check list, begin to establish the healthy habitsthat will
                             make you successful.</li>
-                    <li>The sooner you start, the more prepared you will be for the surgery, recovery, andfor the
+                        <li>The sooner you start, the more prepared you will be for the surgery, recovery, andfor the
                             rest of your life.</li>
-                    <li>Certain things will change once you have surgery; such as food intake, separating fluids from meals, but the fundamentals are the same: healthy habits create a healthy body and life. </li>
+                        <li>Certain things will change once you have surgery; such as food intake, separating fluids from meals, but the fundamentals are the same: healthy habits create a healthy body and life. </li>
+
+                    </ul>
+
                 </div>
 
-                <button onClick={() => this.routeChange('/phaselist')}>Get Started! </button>
+                <Button onClick={() => this.routeChange('/phaselist')}>Get Started! </Button>
 
 
 

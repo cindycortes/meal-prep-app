@@ -61,7 +61,7 @@ class PreOp extends Component {
                     <div className="col s6">
 
                         <ul className="collection with-header">
-                            <li className="collection-header"><h5>CAN EAT: </h5></li>
+                            <li className="collection-header"><h5>WHAT TO EAT: </h5></li>
                             <li className="collection-item">Lean protein: Chicken (baked/boiled), fish or lunch meat</li>
                             <li className="collection-item">Protein Shakes: Premier Protein Shake, Bariatric Advantage, Pure Protein</li>
                             <li className="collection-item">Entrees: Lean Cuisine entrees, Healthy Choice entrees, Weight Watchers Smart Ones entrees, Atkins entrees *Most entrees average 200-400 calories. </li>
@@ -75,7 +75,7 @@ class PreOp extends Component {
                     <div className="col s6">
 
                         <ul className="collection with-header">
-                            <li className="collection-header"><h5>CAN NOT EAT: </h5></li>
+                            <li className="collection-header"><h5>WHAT NOT EAT: </h5></li>
                             <li className="collection-item">No fruit and veggies</li>
                             <li className="collection-item">Avoid fat, butter and oil</li>
                            

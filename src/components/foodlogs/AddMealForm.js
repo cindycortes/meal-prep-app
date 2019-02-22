@@ -20,6 +20,7 @@ class AddMealForm extends Component {
             water_intake: this.state.water_intake
         }
         this.props.addMeal(newMeal)
+        
     }
 
     handleInputChange = e => {
@@ -33,7 +34,7 @@ class AddMealForm extends Component {
 
 
     render() {
-        // console.log(this.props.meals);
+        console.log(this.props.meals);
         return (
 
             <Form onSubmit={this.handleSubmit}>

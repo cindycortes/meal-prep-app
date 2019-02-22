@@ -20,10 +20,7 @@ class MealList extends Component {
             <div>
 
                 <div className="row">
-                    <div className="col">
-                        <AddMealForm />
-
-                    </div>
+                  
                     <div className="col">
                     <h4>Food Log </h4>
                         {listOfMeals}

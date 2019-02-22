@@ -11,7 +11,7 @@ class PreOp extends Component {
     }
 
     async componentDidMount() {
-        const response = await fetch(`http://localhost:8000/foodlog`)
+        const response = await fetch(`http://localhost:8001/foodlog`)
         const meals = await response.json();
         this.setState({ meals });
         // console.log(meals)
@@ -22,37 +22,38 @@ class PreOp extends Component {
 
     addMeal = (newMeal) => {
         const { phase, date, meal_of_the_day, protein, water_intake } = newMeal;
-        fetch(`http://localhost:8000/foodlog`, {
-            method: "post", 
+        fetch(`http://localhost:8001/foodlog`, {
+            method: "post",
             body: JSON.stringify({ phase, date, meal_of_the_day, protein, water_intake }),
             headers: {
                 "Content-Type": "application/json"
             }
-        }) 
-        .then (res => res.json())
-        .then (json => {
-            this.setState(prevState => {
-                return {
-                    meals: [
-                        ...prevState.meals, 
-                        {
-                            phase,
-                            date,
-                            meal_of_the_day,
-                            protein,
-                            water_intake
-                        }
-                    ]
-                }
-            })
         })
+            .then(res => res.json())
+            .then(json => {
+                this.setState(prevState => {
+                    return {
+                        meals: [
+                            ...prevState.meals,
+                            {
+                                id:json[0].id,
+                                phase,
+                                date,
+                                meal_of_the_day,
+                                protein,
+                                water_intake
+                            }
+                        ]
+                    }
+                })
+            })
     }
 
     removeMeal = id => {
-        Axios.delete(`http://localhost:8000/foodlog/${id}`)
+        Axios.delete(`http://localhost:8001/foodlog/${id}`)
         this.setState(prevState => ({
             meals: prevState.meals.reduce((acc, cv) => {
-                if(cv.id === (id) ) {
+                if (cv.id === (id)) {
                     return [
                         ...acc,
                         {
@@ -95,7 +96,7 @@ class PreOp extends Component {
                             <li className="collection-header"><h5>WHAT NOT EAT: </h5></li>
                             <li className="collection-item">No fruit and veggies</li>
                             <li className="collection-item">Avoid fat, butter and oil</li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -103,9 +104,13 @@ class PreOp extends Component {
 
 
                 <div className="row">
-                
                     <div className="col">
-                        
+
+                        <AddMealForm />
+                    </div>
+
+                    <div className="col">
+
                         <MealList meals={this.state.meals} addMeal={this.addMeal} />
                     </div>
                 </div>
